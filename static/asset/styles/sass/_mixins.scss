@@ -1,0 +1,44 @@
+@mixin flexMixin($display, $direction, $jContent, $aitems) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $jContent;
+  align-items: $aitems;
+}
+@mixin styler($color, $bgColor, $fontSize, $borderRadius) {
+  color: $color;
+  background-color: $bgColor;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+}
+@mixin containerMaker {
+  max-width: 1270px;
+  width: 100%;
+  padding: 0 60px;
+}
+@mixin h3Styler {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  color: $primaryColor;
+}
+@mixin imageFit {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+@mixin media($size) {
+  @if ($size == L) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if ($size == T) {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if ($size == P) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}

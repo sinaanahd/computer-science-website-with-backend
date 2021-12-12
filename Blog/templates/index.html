@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'asset/styles/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>انجمن علوم کامپیوتر دانشگاه گیلان</title>
+</head>
+<body>
+    <header>
+        <div class="firts-row">
+            <div class="contact-info">
+                <div>
+                    <span class="contact-info-icon">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                    <span class="info-content">
+                        تماس با ما : <a href="tel:+98131111111">013-11111111</a>
+                    </span>
+                </div>
+                <div>
+                    <span class="contact-info-icon">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <span class="info-content">
+                        ایمیل انجمن : <a href="mailto:info@guilan.ac.ir">info@guilan.ac.ir</a>
+                    </span>
+                </div>
+                <div class="latest-news">
+                    <span class="last-news">اخبار</span>
+                    <span class="last-news-content"></span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <a href="#">
+                    <img src="{% static 'asset/images/logo-big-02.png' %}" alt="لوگوی انجمن"/>
+                </a>
+            </div>
+            <div class="main-menu-container">
+                <p class="show-in-small">منوی وب سایت انجمن</p>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a class="active" href="#">خانه</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">ارتباط با ما</a></li>
+                        <li><a href="#">گالری تصاویر</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="burgerIcon">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+        <span class="btn prevSlider">
+            <i class="fa fa-angle-left"></i>
+        </span>
+        <div class="slider-wrapper">
+        </div>
+        <span class="btn nextSlider">
+            <i class="fa fa-angle-right"></i>
+        </span>
+    </section>
+    <section class="new-slider">
+       
+    </section>
+    <section class="about-us">
+        <div class="au-image">
+            <img src="{% static './asset/images/sliders/slider-2.jpg' %}" alt="عکس درباره انجمن"/>
+        </div>
+        <div class="about-us-div">
+            <p class="about-anjoman-p">درباره انجمن علوم کامپیوتر</p>
+            <h3>متن عنوان نمونه برای قرار دهی در عنوان بخش درباره ما انجمن علوم کامپیوتر دانشگاه گیلان</h3>
+            <p>متن سمپل برای قرار گیری در بخش درباره ما انجمن علوم کامپیوتر
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
+                و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                کاربردی می باشد
+            </p>
+            <a href="#">بیش تر ...</a>
+        </div>
+    </section>
+    <section class="posts-cat">
+        <h3>
+            به وب سایت انجمن علوم کامپیوتر دانشگاه گیلان خوش آمدید
+        </h3>
+        <p>
+            از آخرین مقالات ما دیدن کنید
+        </p>
+        <div class="filter-posts">
+            <ul>
+                <li class="post-cats-btns active" data-id="1"><span><i class="fa fa-cubes"></i>دسته بندی ۱</span></li>
+                <li class="post-cats-btns" data-id="2"><span><i class="fa fa-balance-scale"></i>دسته بندی ۲</span></li>
+                <li class="post-cats-btns" data-id="3"><span><i class="fa fa-calculator"></i>دسته بندی ۳</span></li>
+                <li class="post-cats-btns" data-id="4"><span><i class="fa fa-anchor"></i>دسته بندی ۴</span></li>
+                <li class="post-cats-btns" data-id="5"><span><i class="fa fa-balance-scale"></i>دسته بندی ۵</span></li>
+                <li class="post-cats-btns" data-id="6"><span><i class="fa fa-calculator"></i>دسته بندی ۶</span></li>
+                <li class="post-cats-btns" data-id="7"><span><i class="fa fa-anchor"></i>دسته بندی ۷</span></li>
+                <li class="post-cats-btns" data-id="8"><span><i class="fa fa-anchor"></i>دسته بندی ۸</span></li>
+                
+            </ul>
+        </div>
+        <div class="posts">
+            <!-- <div class="single-post">
+                <div class="post-image">
+                    <img src="/asset/images/main_page/posts-img.jpeg" alt="عکس مقاله">
+                </div>
+                <div class="posts-content">
+                    <h4>متن نمونه برای عنوان مقاله</h4>
+                    <div class="post-detail">
+                        <span>
+                            <a href="#" class="post-category">
+                                دسته بندی ۱
+                            </a>
+                        </span>
+                        <span class="post-date">۱۲ / آبان / ۱۳۹۶</span>
+                    </div>
+                    <p class="post-text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم 
+                        از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                         چاپگرها و متون بلکه روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و
+                         برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                         متنوع با هدف بهبود ابزارهای
+                        کاربردی می باشد.
+                    </p>
+                    <a href="#" class="post-more-btn">
+                        بیشتر بخوانید...
+                    </a>
+                </div>
+            </div>
+            <div class="single-post">
+                <div class="post-image">
+                    <img src="/asset/images/main_page/posts-img.jpeg" alt="عکس مقاله">
+                </div>
+                <div class="posts-content">
+                    <h4>متن نمونه برای عنوان مقاله</h4>
+                    <div class="post-detail">
+                        <span>
+                            <a href="#" class="post-category">
+                                دسته بندی ۱
+                            </a>
+                        </span>
+                        <span class="post-date">۱۲ / آبان / ۱۳۹۶</span>
+                    </div>
+                    <p class="post-text">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                        از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و
+                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                        متنوع با هدف بهبود ابزارهای
+                        کاربردی می باشد.
+                    </p>
+                    <a href="#" class="post-more-btn">
+                        بیشتر بخوانید...
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="members-part">
+        <h3>
+            اعضای انجمن
+        </h3>
+        <P>
+            با برخی از اعضای انجمن علوم کامپیوتر دانشگاه گیلان آشنا شوید
+        </P>
+        <div class="memebers-images-container">
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-1.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-2.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-3.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-4.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-5.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-6.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-7.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+            <div class="members-details">
+                <img src="{% static 'asset/images/main_page/random-people-8.jpeg' %}" alt="عکس اعضای انجمن">
+                <span class="members-hidden-content">
+                    <h4>اسم عضو انجمن</h4>
+                    <p>تخصص عضو انجمن یا توضیح</p>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="news-section">
+        <h3>اخرین اخبار انجمن علوم کامپبوتر</h3>
+        <p>
+            از آخرین اخبار انجمن علوم کامپیوتر مطلع شوید
+        </p>
+        <div class="news-wrapper">
+            <!-- <div class="single-news">
+                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
+                <div class="news-contentwrpaper">
+                    <h4>عنوان برای اخبار</h4>
+                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
+                    <p class="news-content">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+                    </p>
+                    <a href="#" class="read-more-news-btn">
+                        بیشتر بخوانید ...
+                    </a>
+                </div>
+            </div>
+            <div class="single-news">
+                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
+                <div class="news-contentwrpaper">
+                    <h4>عنوان برای اخبار</h4>
+                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
+                    <p class="news-content">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                        روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای
+                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+                    </p>
+                    <a href="#" class="read-more-news-btn">
+                        بیشتر بخوانید ...
+                    </a>
+                </div>
+            </div>
+            <div class="single-news">
+                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
+                <div class="news-contentwrpaper">
+                    <h4>عنوان برای اخبار</h4>
+                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
+                    <p class="news-content">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                        روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای
+                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+                    </p>
+                    <a href="#" class="read-more-news-btn">
+                        بیشتر بخوانید ...
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="photo-gallery">
+        <h3>گالری تصاویر</h3>
+        <p>برخی تصاویر انجمن علوم کامپیوتر دانشگاه گیلان</p>
+        <div class="photo-wrapper">
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-1.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-2.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-3.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-4.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-5.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-6.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-7.jpg' %}" alt="">
+            </div>
+            <div class="gallery-photo">
+                <img src="{% static 'asset/images/main_page/photo-gallery-8.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-col">
+            <img src="{% static 'asset/images/logo-big-02.png' %}" class="footer-logo"/>
+            <p>
+                متن نمونه برای قرار دهی در قسمت پاورقی برای توضیح کوتاه انجمن علوم کامپیوتر دانشگاه گیلان
+            </p>
+            <span class="foooter-call-links">
+                <a href="tel:+98111111111"><bdi>+۹۸ ۱۳ ۱۱۱۱۱۱</bdi><i class="fa fa-phone"></i></a>
+                <a href="tel:+98111111111"><bdi>+۹۸ ۱۳ ۱۱۱۱۱۱</bdi><i class="fa fa-phone"></i></a>
+            </span>
+        </div>
+        <div class="footer-col">
+            <h4>
+                لینک های کاربردی
+            </h4>
+            <ul>
+                <li><a href="#">لینک کاربردی ۱</a></li>
+                <li><a href="#">لینک کاربردی ۲</a></li>
+                <li><a href="#">لینک کاربردی ۳</a></li>
+                <li><a href="#">لینک کاربردی ۴</a></li>
+                <li><a href="#">لینک کاربردی ۵</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>
+                درباره انجمن
+            </h4>
+            <ul>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">گالری تصاویر</a></li>
+                <li><a href="#">اخبار</a></li>
+                <li><a href="#">مقالات</a></li>
+                <li><a href="#">ارتباط با ما</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <a href="#" class="login-btn">
+                ورود به داشبورد 
+            </a>
+            <ul class="social-footer">
+                <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-telegram"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="menuCloser"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{% static 'asset/js/main/main.js' %}" type="module"></script>
+    <script src="{% static 'asset/js/slider/slider.js' %}" type="module"></script>
+</body>
+</html>
