@@ -146,6 +146,64 @@ ul {
   .main-header .burgerIcon {
     display: none; }
 
+.posts {
+  padding: 0 60px;
+  margin: 2em 0 4em; }
+  .posts h1 {
+    color: #142f43;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 2em; }
+  .posts img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; }
+  .posts .postwarpper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px; }
+  .posts .single-post {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px -5px #0000006b; }
+    .posts .single-post h2 {
+      margin: 1em 20px 0.5em;
+      font-size: 20px; }
+    .posts .single-post .post-deatials {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 14px;
+      column-gap: 30px; }
+      .posts .single-post .post-deatials p {
+        margin: 0; }
+      .posts .single-post .post-deatials a {
+        color: #ff5f7e; }
+    .posts .single-post .post-content {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 35px;
+      padding: 0 20px;
+      margin: 1em 0; }
+    .posts .single-post .show-more {
+      color: #ff5f7e;
+      background-color: #fdfdfd;
+      font-size: 17px;
+      border-radius: 5px;
+      border: 1px solid #ff5f7e;
+      width: 100px;
+      display: inline-block;
+      text-align: center;
+      margin: 0.5em 20px 1.5em; }
+      .posts .single-post .show-more:hover {
+        color: #fdfdfd;
+        background-color: #ff5f7e;
+        transform: scale(1.2); }
+
 footer {
   margin: 0;
   background-color: #ffffff;
