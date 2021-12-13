@@ -4,7 +4,7 @@ from . import models
 
 
 class ImageInLine(admin.TabularInline):
-    model = models.Image
+    model = models.PostImage
 
 class VideoInLine(admin.TabularInline):
     model = models.Video
@@ -18,7 +18,7 @@ class PostAdmin(admin.ModelAdmin):
     class Meta:
         model = models.Post
 
-@admin.register(models.Image)
+@admin.register(models.PostImage)
 class ImageAdmin(admin.ModelAdmin):
     pass
 
