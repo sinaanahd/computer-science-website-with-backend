@@ -1,6 +1,6 @@
 from django.db.models import fields
 from rest_framework import serializers
-from .models import Post,Profile,Image,Video,Category
+from .models import GalleryImage, Post,Profile,PostImage,Video,Category
 from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
@@ -13,18 +13,24 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ['name']
 
-class PostSerializer(serializers.ModelSerializer):
-    user = UserSerializer(source='autor')
-    cat = CategorySerializer(source='category')
-    class Meta:
-        model = Post
-        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'date' , 'user' , 'slug']
-
 class ImageSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(max_length=None)
     class Meta:
-        model = Image
+        model = PostImage
         fields = ['image' , 'desc']
+
+
+class PostSerializer(serializers.ModelSerializer):
+    user = UserSerializer(source='autor')
+    cat = CategorySerializer(source='category')
+    images = serializers.SerializerMethodField()
+    class Meta:
+        model = Post
+        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'date' , 'user' , 'slug' , 'images']
+
+    def get_images(self, obj):
+        images = PostImage.objects.filter(post=obj)
+        return ImageSerializer(images , many=True).data
 
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,3 +42,9 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['user' , 'image' , 'desc']
+
+class GallerySerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(max_length=None)
+    class Meta:
+        model = GalleryImage
+        fields = ['image' , 'desc']

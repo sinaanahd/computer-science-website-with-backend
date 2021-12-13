@@ -51,11 +51,16 @@ class Post(models.Model):
 
 
 
-class Image(models.Model):
+class PostImage(models.Model):
     
-    image = models.ImageField(upload_to='pictures' , blank=True , verbose_name='تصاویر')
+    image = models.ImageField(upload_to='PostImage' , blank=True , verbose_name='تصاویر')
     post = models.ForeignKey(Post , on_delete=models.PROTECT , default=1)
-    desc = models.CharField(max_length=1000 , verbose_name='توضیحات' , null=True)
+    desc = models.CharField(max_length=1000 , verbose_name='توضیحات' , null=True , blank=True)
+
+class GalleryImage(models.Model):
+
+    image = models.ImageField(upload_to='Gallery' , verbose_name='تصویر')
+    desc = models.CharField(max_length=200 , verbose_name='عکس نوشت' , null=True , blank=True)
 
 
 class Video(models.Model):

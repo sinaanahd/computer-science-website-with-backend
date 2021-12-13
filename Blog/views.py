@@ -17,18 +17,29 @@ def index(request):
 
     return render(request , 'index.html')
 
+def posts(request):
+
+    return render(request , 'posts.html')
+
 def post_detail(request , slug):
 
     return render(request , 'post.html' )
 
-def contact_us(request):
+def about_us(request):
 
-    return render(request,'contact_us.html')
+    return render(request,'about_us.html')
 
 def photo_gallery(request):
     
     return render(request , 'photo_gallery.html')
 
+def newsew(request):
+
+    return render(request , 'newses.html')
+
+def news_detail(request , slug):
+
+    return render(request , 'news_detail.html')
 
 
 class PostList(APIView):
@@ -51,7 +62,7 @@ class PostList(APIView):
 class PostDetail(APIView):
 
     """
-    Retrieve, update or delete a snippet instance.
+    Retrieve, update or delete a post instance.
     """
 
     def get_object(self, slug):
@@ -78,3 +89,9 @@ class PostDetail(APIView):
     #     snippet.delete()
     #     return Response(status=status.HTTP_204_NO_CONTENT)
 
+class Gallery(APIView):
+
+    def get(self, request, format=None):
+        photos = models.GalleryImage.objects.all()
+        serializer = serializers.GallerySerializer(photos , many=True)
+        return Response(serializer.data)
