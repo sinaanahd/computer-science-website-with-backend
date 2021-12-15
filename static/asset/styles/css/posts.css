@@ -167,7 +167,11 @@ ul {
   .posts .single-post {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: inset 0px 0px 10px -5px #0000006b; }
+    box-shadow: inset 0px 0px 10px -5px #0000006b;
+    transition: all ease-in-out 0.3s; }
+    .posts .single-post:hover {
+      transform: translateY(-20px);
+      box-shadow: 0px 0px 10px -5px #0000006b; }
     .posts .single-post h2 {
       margin: 1em 20px 0.5em;
       font-size: 20px; }
@@ -306,6 +310,9 @@ footer {
   .firts-row {
     column-gap: 0px; }
 
+  .posts .postwarpper {
+    grid-template-columns: repeat(3, 1fr); }
+
   footer {
     font-size: 13px; }
     footer h4 {
@@ -363,6 +370,9 @@ footer {
   .firts-row .contact-info .latest-news {
     display: none; }
 
+  .posts .postwarpper {
+    grid-template-columns: repeat(2, 1fr); }
+
   footer {
     flex-direction: column; }
     footer h4 {
@@ -373,6 +383,13 @@ footer {
 
   .main-header {
     padding: 1em 30px; }
+
+  .posts {
+    padding: calc(100% - 97%); }
+    .posts h1 {
+      font-size: 25px; }
+    .posts .postwarpper {
+      grid-template-columns: 1fr; }
 
   footer {
     padding: 30px 10px 0; }
