@@ -131,6 +131,7 @@ class News {
 
 class Post {
     renderPosts(post) {
+        //console.log(post);
         const singlePostTag = document.createElement('div');
         singlePostTag.classList.add('single-post');
         const singlePostContent = `<div class="post-image">
@@ -149,7 +150,7 @@ class Post {
         <p class="post-text">
         ${post.excerpt}
         </p>
-        <a href="${post.slug}" class="post-more-btn">
+        <a href="post/${post.slug}" class="post-more-btn">
             بیشتر بخوانید...
         </a>
     </div>`;
