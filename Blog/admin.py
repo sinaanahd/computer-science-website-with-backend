@@ -1,5 +1,7 @@
 from django.contrib import admin
 from . import models
+from django_jalali.admin.filters import JDateFieldListFilter
+import django_jalali.admin as jadmin
 
 
 
@@ -13,6 +15,10 @@ class VideoInLine(admin.TabularInline):
 class PostAdmin(admin.ModelAdmin):
     inlines = [ImageInLine , VideoInLine]
     prepopulated_fields = {'slug': ('title',), }
+    list_filter = (
+        ('datetime', JDateFieldListFilter),
+        ('date', JDateFieldListFilter),
+    )
     
 
     class Meta:

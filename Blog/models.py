@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django_jalali.db import models as jmodels
+
 
 
 class Category(models.Model):
@@ -28,11 +30,12 @@ class Post(models.Model):
     excerpt = models.TextField(null=True , verbose_name='خلاصه مطلب',max_length=500)
     content = RichTextField(config_name='full')
     category = models.ForeignKey(Category , on_delete=models.PROTECT , default=1 , verbose_name='دسته بندی' , null=True)
-    date = models.DateTimeField(default=timezone.now , verbose_name='تاریخ انتشار')
+    date = jmodels.jDateTimeField(verbose_name='تاریخ انتشار')
     autor = models.ForeignKey(User , on_delete=models.PROTECT , verbose_name='نویسنده')
     status = models.CharField(max_length=10 , choices=options , default='published' , verbose_name='وضعیت')
     slug = models.SlugField(
         unique_for_date='date' ,
+        allow_unicode=True ,
         max_length=200 ,
         help_text=("The name of the page as it will appear in URLs e.g http://domain.com/blog/[my-slug]/"),
         )

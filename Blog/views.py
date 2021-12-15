@@ -23,7 +23,7 @@ def posts(request):
 
 def post_detail(request , slug):
 
-    return render(request , 'post.html' )
+    return render(request , 'post.html'  )
 
 def about_us(request):
 
