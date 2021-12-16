@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . import models
-from django_jalali.admin.filters import JDateFieldListFilter
-import django_jalali.admin as jadmin
+from jalali_date import datetime2jalali
+from jalali_date.admin import ModelAdminJalaliMixin
 
 
 
@@ -12,14 +12,13 @@ class VideoInLine(admin.TabularInline):
     model = models.Video
 
 @admin.register(models.Post)
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin( ModelAdminJalaliMixin , admin.ModelAdmin):
     inlines = [ImageInLine , VideoInLine]
     prepopulated_fields = {'slug': ('title',), }
-    list_filter = (
-        ('datetime', JDateFieldListFilter),
-        ('date', JDateFieldListFilter),
-    )
-    
+
+    def get_created_jalali(self, obj):
+        return datetime2jalali(obj.date).strftime('%y/%m/%d _ %H:%M:%S')
+	
 
     class Meta:
         model = models.Post

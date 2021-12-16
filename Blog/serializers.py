@@ -24,9 +24,10 @@ class PostSerializer(serializers.ModelSerializer):
     user = UserSerializer(source='autor')
     cat = CategorySerializer(source='category')
     images = serializers.SerializerMethodField()
+    datetime = serializers.DateTimeField(source='get_jalali_date')
     class Meta:
         model = Post
-        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'date' , 'user' , 'slug' , 'images']
+        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'datetime' , 'user' , 'slug' , 'images']
 
     def get_images(self, obj):
         images = PostImage.objects.filter(post=obj)
