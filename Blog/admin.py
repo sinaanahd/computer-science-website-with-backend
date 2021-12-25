@@ -16,8 +16,8 @@ class PostAdmin( ModelAdminJalaliMixin , admin.ModelAdmin):
     inlines = [ImageInLine , VideoInLine]
     prepopulated_fields = {'slug': ('title',), }
 
-    def get_created_jalali(self, obj):
-        return datetime2jalali(obj.date).strftime('%y/%m/%d _ %H:%M:%S')
+    # def get_created_jalali(self, obj):
+    #     return datetime2jalali(obj.date).strftime('%y/%m/%d _ %H:%M:%S')
 	
 
     class Meta:
