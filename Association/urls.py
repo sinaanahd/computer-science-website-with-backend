@@ -1,9 +1,11 @@
-from os import name
+# from os import name
+# from django.contrib import auth
 from django.contrib import admin
-from django.contrib import auth
 from django.urls import path , include
 from Blog import views
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -24,4 +26,4 @@ urlpatterns = [
     
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
