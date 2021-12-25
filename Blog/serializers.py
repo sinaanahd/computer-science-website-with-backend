@@ -25,18 +25,25 @@ class PostSerializer(serializers.ModelSerializer):
     cat = CategorySerializer(source='category')
     images = serializers.SerializerMethodField()
     datetime = serializers.DateTimeField(source='get_jalali_date')
+    videos = serializers.SerializerMethodField(source='get_file')
+
     class Meta:
         model = Post
-        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'datetime' , 'user' , 'slug' , 'images']
+        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'datetime' , 'user' , 'slug' , 'images' , 'videos']
 
     def get_images(self, obj):
         images = PostImage.objects.filter(post=obj)
         return ImageSerializer(images , many=True).data
 
+    def get_videos(self , obj):
+        videos = Video.objects.filter(post=obj)
+        return VideoSerializer(videos , many=True).data
+
 class VideoSerializer(serializers.ModelSerializer):
+    video = serializers.FileField()
     class Meta:
         model = Video
-        fields = ['video']
+        fields = ['video',]
 
 class ProfileSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(max_length=None)
