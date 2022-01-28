@@ -24,12 +24,12 @@ class PostSerializer(serializers.ModelSerializer):
     user = UserSerializer(source='autor')
     cat = CategorySerializer(source='category')
     images = serializers.SerializerMethodField()
-    datetime = serializers.DateTimeField(source='get_jalali_date')
+    datetime = serializers.DateTimeField(source='date')
     videos = serializers.SerializerMethodField(source='get_file')
 
     class Meta:
         model = Post
-        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat' , 'datetime' , 'user' , 'slug' , 'images' , 'videos']
+        fields = ['id' , 'title' , 'excerpt' , 'content' , 'cat'  , 'user' ,'datetime' , 'slug' , 'images' , 'videos']
 
     def get_images(self, obj):
         images = PostImage.objects.filter(post=obj)

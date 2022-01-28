@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from jalali_date import datetime2jalali
+# from django.urls import reverse
+# from django.template.defaultfilters import slugify
 
 
 class Category(models.Model):
@@ -37,7 +39,9 @@ class Post(models.Model):
         allow_unicode=True ,
         max_length=200 ,
         help_text=("The name of the page as it will appear in URLs e.g http://domain.com/blog/[my-slug]/"),
+        null=True,
         )
+
 
     def get_jalali_date(self):
         return datetime2jalali(self.date)

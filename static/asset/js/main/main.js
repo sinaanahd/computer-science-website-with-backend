@@ -1,6 +1,8 @@
 /* -------- imports --------*/
 import { allNews } from "../news/news-data.js";
 /* -------- variables --------- */
+let today = new Date().toLocaleDateString('fa-IR');
+console.log(today);
 
 //image gallery
 const galleryWrapper = document.querySelector('.photo-wrapper');
