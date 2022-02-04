@@ -34,7 +34,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['id', 'title', 'excerpt', 'content', 'cat',
-                  'datetime', 'user', 'slug', 'images', 'videos']
+                  'user', 'datetime', 'slug', 'images', 'videos']
 
     def get_images(self, obj):
         images = PostImage.objects.filter(post=obj)

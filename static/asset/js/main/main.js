@@ -6,6 +6,8 @@ import { HeaderFooter } from "./template.js";
 // let neededDate = date.toLocaleDateString('fa-IR');
 // console.log(neededDate);
 /* -------- variables --------- */
+let today = new Date().toLocaleDateString('fa-IR');
+console.log(today);
 
 //image gallery
 const galleryWrapper = document.querySelector('.photo-wrapper');

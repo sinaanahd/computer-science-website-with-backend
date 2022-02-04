@@ -6,6 +6,7 @@ from Blog import views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import re_path
 
 
 urlpatterns = [
@@ -20,7 +21,7 @@ urlpatterns = [
     path('newses/<slug:slug>' , views.news_detail , name='news_detail'),
 
     # api address
-    path('api/posts/<slug:slug>/', views.PostDetail.as_view()),
+    re_path('api/posts/(?P<slug>[-\w]+)/', views.PostDetail.as_view()),
     path('api/posts/', views.PostList.as_view()),
     path('api/gallery/' , views.Gallery.as_view()),
     
