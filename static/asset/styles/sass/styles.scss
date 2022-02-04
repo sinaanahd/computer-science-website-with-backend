@@ -290,6 +290,7 @@ ul {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       column-gap: 5px;
+      row-gap: 5px;
 
       li {
         @include styler($extraColor1, #fff, 13px, 5px);
@@ -326,11 +327,17 @@ ul {
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
+    height: 250px;
     img {
-      @include imageFit;
+      height: 100%;
+      width: auto;
+    }
+    .post-image {
+      flex-basis: 28%;
     }
     .posts-content {
       padding: 0 2em;
+      flex-basis: 72%;
       @include flexMixin(flex, column, center, flex-start);
       h4 {
         margin: 0 0 1em;
@@ -646,10 +653,7 @@ footer {
     }
   }
   .single-post {
-    flex-basis: 50%;
-  }
-  .posts-content {
-    flex-basis: 50%;
+    height: 310px !important;
   }
   footer {
     font-size: 13px;
@@ -752,7 +756,7 @@ footer {
   .posts-cat {
     padding: 0em 60px;
     .posts {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       column-gap: 30px;
       .single-post {
@@ -761,6 +765,13 @@ footer {
         .posts-content {
           padding: 2em 1em;
         }
+      }
+      .single-post {
+        height: auto !important;
+      }
+      img {
+        @include imageFit;
+        width: 100%;
       }
     }
   }

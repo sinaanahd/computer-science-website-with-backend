@@ -156,42 +156,8 @@ ul {
     display: none;
   }
 }
-// posts styles
-.filter-posts {
-  margin: 3em 0 4em;
-  ul {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: 5px;
-    row-gap: 5px;
-
-    li {
-      @include styler($extraColor1, #fff, 13px, 5px);
-      text-align: center;
-      border: 2px solid $extraColor1;
-      font-weight: bold;
-      padding: 10px 0px;
-      transition: $transition;
-      &:hover {
-        @include styler(#fff, $extraColor1, 13px, 5px);
-        cursor: pointer;
-        transition: $transition;
-      }
-    }
-    .active {
-      @include styler(#fff, $extraColor1, 13px, 5px);
-      cursor: pointer;
-    }
-    i {
-      margin: 0 10px;
-      font-size: 20px;
-      position: relative;
-      top: 2px;
-    }
-  }
-}
-
-.posts {
+// newses style
+.newses-body {
   padding: 0 60px;
   margin: 2em 0 4em;
   h1 {
@@ -203,13 +169,13 @@ ul {
   img {
     @include imageFit;
   }
-  .postwarpper {
+  .newses-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     row-gap: 30px;
   }
-  .single-post {
+  .single-news {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: inset 0px 0px 10px -5px #0000006b;
@@ -222,22 +188,12 @@ ul {
       margin: 1em 20px 0.5em;
       font-size: 20px;
     }
-    .post-deatials {
-      @include flexMixin(flex, row, flex-start, center);
-      padding: 0 20px;
-      font-size: 14px;
-      column-gap: 30px;
-      p {
-        margin: 0;
-      }
-      a {
-        color: $extraColor1;
-      }
-      .category {
-        font-weight: bold;
-      }
+    .news-date {
+      color: $extraColor1;
+      font-size: 13px;
+      margin: 0 20px 0 0;
     }
-    .post-content {
+    .news-content {
       text-align: justify;
       font-size: 14px;
       line-height: 35px;
@@ -367,8 +323,8 @@ footer {
   .firts-row {
     column-gap: 0px;
   }
-  .posts {
-    .postwarpper {
+  .newses-body {
+    .newses-wrapper {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -438,8 +394,8 @@ footer {
       }
     }
   }
-  .posts {
-    .postwarpper {
+  .newses-body {
+    .newses-wrapper {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -457,12 +413,12 @@ footer {
   .main-header {
     padding: 1em 30px;
   }
-  .posts {
+  .newses-body {
     padding: calc(100% - 97%);
     h1 {
       font-size: 25px;
     }
-    .postwarpper {
+    .newses-wrapper {
       grid-template-columns: 1fr;
     }
   }
