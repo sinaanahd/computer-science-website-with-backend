@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'asset/styles/css/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>انجمن علوم کامپیوتر دانشگاه گیلان</title>
+    <title>انجمن علوم کامپیوتر دانشگاه </title>
 </head>
 <body>
-    <header>
-        <div class="firts-row">
+    <header class="header">
+        <!-- <div class="firts-row">
             <div class="contact-info">
                 <div>
                     <span class="contact-info-icon">
@@ -63,7 +63,7 @@
             <div class="burgerIcon">
                 <i class="fa fa-bars"></i>
             </div>
-        </div>
+        </div> -->
     </header>
     <section class="slider">
         <span class="btn prevSlider">
@@ -101,75 +101,18 @@
             از آخرین مقالات ما دیدن کنید
         </p>
         <div class="filter-posts">
-            <ul>
-                <li class="post-cats-btns active" data-id="1"><span><i class="fa fa-cubes"></i>دسته بندی ۱</span></li>
+            <ul class="filter-posts-ul">
+                <!-- <li class="post-cats-btns active" data-id="1"><span><i class="fa fa-cubes"></i>دسته بندی ۱</span></li>
                 <li class="post-cats-btns" data-id="2"><span><i class="fa fa-balance-scale"></i>دسته بندی ۲</span></li>
                 <li class="post-cats-btns" data-id="3"><span><i class="fa fa-calculator"></i>دسته بندی ۳</span></li>
                 <li class="post-cats-btns" data-id="4"><span><i class="fa fa-anchor"></i>دسته بندی ۴</span></li>
                 <li class="post-cats-btns" data-id="5"><span><i class="fa fa-balance-scale"></i>دسته بندی ۵</span></li>
                 <li class="post-cats-btns" data-id="6"><span><i class="fa fa-calculator"></i>دسته بندی ۶</span></li>
                 <li class="post-cats-btns" data-id="7"><span><i class="fa fa-anchor"></i>دسته بندی ۷</span></li>
-                <li class="post-cats-btns" data-id="8"><span><i class="fa fa-anchor"></i>دسته بندی ۸</span></li>
-                
+                <li class="post-cats-btns" data-id="8"><span><i class="fa fa-anchor"></i>دسته بندی ۸</span></li> -->
             </ul>
         </div>
         <div class="posts">
-            <!-- <div class="single-post">
-                <div class="post-image">
-                    <img src="/asset/images/main_page/posts-img.jpeg" alt="عکس مقاله">
-                </div>
-                <div class="posts-content">
-                    <h4>متن نمونه برای عنوان مقاله</h4>
-                    <div class="post-detail">
-                        <span>
-                            <a href="#" class="post-category">
-                                دسته بندی ۱
-                            </a>
-                        </span>
-                        <span class="post-date">۱۲ / آبان / ۱۳۹۶</span>
-                    </div>
-                    <p class="post-text">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم 
-                        از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                         چاپگرها و متون بلکه روزنامه
-                        و مجله در ستون و سطرآنچنان که لازم است و
-                         برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
-                         متنوع با هدف بهبود ابزارهای
-                        کاربردی می باشد.
-                    </p>
-                    <a href="#" class="post-more-btn">
-                        بیشتر بخوانید...
-                    </a>
-                </div>
-            </div>
-            <div class="single-post">
-                <div class="post-image">
-                    <img src="/asset/images/main_page/posts-img.jpeg" alt="عکس مقاله">
-                </div>
-                <div class="posts-content">
-                    <h4>متن نمونه برای عنوان مقاله</h4>
-                    <div class="post-detail">
-                        <span>
-                            <a href="#" class="post-category">
-                                دسته بندی ۱
-                            </a>
-                        </span>
-                        <span class="post-date">۱۲ / آبان / ۱۳۹۶</span>
-                    </div>
-                    <p class="post-text">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
-                        از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                        چاپگرها و متون بلکه روزنامه
-                        و مجله در ستون و سطرآنچنان که لازم است و
-                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
-                        متنوع با هدف بهبود ابزارهای
-                        کاربردی می باشد.
-                    </p>
-                    <a href="#" class="post-more-btn">
-                        بیشتر بخوانید...
-                    </a>
-                </div>
-            </div> -->
         </div>
     </section>
     <section class="members-part">
@@ -244,55 +187,7 @@
             از آخرین اخبار انجمن علوم کامپیوتر مطلع شوید
         </p>
         <div class="news-wrapper">
-            <!-- <div class="single-news">
-                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
-                <div class="news-contentwrpaper">
-                    <h4>عنوان برای اخبار</h4>
-                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
-                    <p class="news-content">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
-                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
-                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
-                    </p>
-                    <a href="#" class="read-more-news-btn">
-                        بیشتر بخوانید ...
-                    </a>
-                </div>
-            </div>
-            <div class="single-news">
-                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
-                <div class="news-contentwrpaper">
-                    <h4>عنوان برای اخبار</h4>
-                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
-                    <p class="news-content">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-                        روزنامه
-                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-                        ابزارهای
-                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
-                    </p>
-                    <a href="#" class="read-more-news-btn">
-                        بیشتر بخوانید ...
-                    </a>
-                </div>
-            </div>
-            <div class="single-news">
-                <img src="asset/images/main_page/news-image.jpeg" alt="عکس اخبار" class="news-image">
-                <div class="news-contentwrpaper">
-                    <h4>عنوان برای اخبار</h4>
-                    <span class="news-date">۱۱ / آبان / ۱۳۵۲</span>
-                    <p class="news-content">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-                        روزنامه
-                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-                        ابزارهای
-                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
-                    </p>
-                    <a href="#" class="read-more-news-btn">
-                        بیشتر بخوانید ...
-                    </a>
-                </div>
-            </div> -->
+            
         </div>
     </section>
     <section class="photo-gallery">
@@ -325,8 +220,8 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-col">
+    <footer class="footer">
+        <!-- <div class="footer-col">
             <img src="{% static 'asset/images/logo-big-02.png' %}" class="footer-logo"/>
             <p>
                 متن نمونه برای قرار دهی در قسمت پاورقی برای توضیح کوتاه انجمن علوم کامپیوتر دانشگاه گیلان
@@ -375,7 +270,7 @@
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </footer>
     <div class="menuCloser"></div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

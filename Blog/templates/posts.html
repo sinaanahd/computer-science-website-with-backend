@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'asset/styles/css/posts.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>انجمن علوم کامپیوتر دانشگاه گیلان</title>
+    <title> مقالات انجمن علوم کامپیوتر دانشگاه گیلان</title>
 </head>
 
 <body>
-    <header>
-        <div class="firts-row">
+    <header class="header">
+        <!-- <div class="firts-row">
             <div class="contact-info">
                 <div>
                     <span class="contact-info-icon">
@@ -65,12 +65,15 @@
             <div class="burgerIcon">
                 <i class="fa fa-bars"></i>
             </div>
-        </div>
+        </div> -->
     </header>
     <section class="posts">
         <h1>مقالات انجمن علمی علوم کامپیوتر</h1>
+        <div class="filter-posts">
+            <ul class="filter-posts-ul"></ul>
+        </div>
         <div class="postwarpper">
-            <div class="single-post">
+            <!-- <div class="single-post">
                 <img src="../../static/asset/images/main_page/posts-img.jpeg" alt="">
                 <h2> عنوان برای مقاله</h2>
                 <span class="post-deatials">
@@ -213,11 +216,11 @@
                 <a href="#" class="show-more">
                     ادامه ...
                 </a>
-            </div>
+            </div> -->
         </div>
     </section>
-    <footer>
-        <div class="footer-col">
+    <footer class="footer">
+        <!-- <div class="footer-col">
             <img src="{% static 'asset/images/logo-big-02.png' %}" class="footer-logo" />
             <p>
                 متن نمونه برای قرار دهی در قسمت پاورقی برای توضیح کوتاه انجمن علوم کامپیوتر دانشگاه گیلان
@@ -266,10 +269,11 @@
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </footer>
     <div class="menuCloser"></div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="{% static 'asset/js/posts/posts.js' %}"></script>
+    <script src="{% static 'asset/js/posts/posts.js' %}"  type="module"></script>
 </body>
+
 </html>

@@ -146,93 +146,47 @@ ul {
   .main-header .burgerIcon {
     display: none; }
 
-.filter-posts {
-  margin: 3em 0 4em; }
-  .filter-posts ul {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: 5px;
-    row-gap: 5px; }
-    .filter-posts ul li {
-      color: #ff5f7e;
-      background-color: #fff;
-      font-size: 13px;
-      border-radius: 5px;
-      text-align: center;
-      border: 2px solid #ff5f7e;
-      font-weight: bold;
-      padding: 10px 0px;
-      transition: all ease-in-out 0.3s; }
-      .filter-posts ul li:hover {
-        color: #fff;
-        background-color: #ff5f7e;
-        font-size: 13px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all ease-in-out 0.3s; }
-    .filter-posts ul .active {
-      color: #fff;
-      background-color: #ff5f7e;
-      font-size: 13px;
-      border-radius: 5px;
-      cursor: pointer; }
-    .filter-posts ul i {
-      margin: 0 10px;
-      font-size: 20px;
-      position: relative;
-      top: 2px; }
-
-.posts {
+.newses-body {
   padding: 0 60px;
   margin: 2em 0 4em; }
-  .posts h1 {
+  .newses-body h1 {
     color: #142f43;
     font-size: 40px;
     text-align: center;
     margin: 0 0 2em; }
-  .posts img {
+  .newses-body img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto; }
-  .posts .postwarpper {
+  .newses-body .newses-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     row-gap: 30px; }
-  .posts .single-post {
+  .newses-body .single-news {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: inset 0px 0px 10px -5px #0000006b;
     transition: all ease-in-out 0.3s; }
-    .posts .single-post:hover {
+    .newses-body .single-news:hover {
       transform: translateY(-20px);
       box-shadow: 0px 0px 10px -5px #0000006b; }
-    .posts .single-post h2 {
+    .newses-body .single-news h2 {
       margin: 1em 20px 0.5em;
       font-size: 20px; }
-    .posts .single-post .post-deatials {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 0 20px;
-      font-size: 14px;
-      column-gap: 30px; }
-      .posts .single-post .post-deatials p {
-        margin: 0; }
-      .posts .single-post .post-deatials a {
-        color: #ff5f7e; }
-      .posts .single-post .post-deatials .category {
-        font-weight: bold; }
-    .posts .single-post .post-content {
+    .newses-body .single-news .news-date {
+      color: #ff5f7e;
+      font-size: 13px;
+      margin: 0 20px 0 0; }
+    .newses-body .single-news .news-content {
       text-align: justify;
       font-size: 14px;
       line-height: 35px;
       padding: 0 20px;
       margin: 1em 0;
       min-height: 120px; }
-    .posts .single-post .show-more {
+    .newses-body .single-news .show-more {
       color: #ff5f7e;
       background-color: #fdfdfd;
       font-size: 17px;
@@ -242,7 +196,7 @@ ul {
       display: inline-block;
       text-align: center;
       margin: 0.5em 20px 1.5em; }
-      .posts .single-post .show-more:hover {
+      .newses-body .single-news .show-more:hover {
         color: #fdfdfd;
         background-color: #ff5f7e;
         transform: scale(1.2); }
@@ -349,7 +303,7 @@ footer {
   .firts-row {
     column-gap: 0px; }
 
-  .posts .postwarpper {
+  .newses-body .newses-wrapper {
     grid-template-columns: repeat(3, 1fr); }
 
   footer {
@@ -409,7 +363,7 @@ footer {
   .firts-row .contact-info .latest-news {
     display: none; }
 
-  .posts .postwarpper {
+  .newses-body .newses-wrapper {
     grid-template-columns: repeat(2, 1fr); }
 
   footer {
@@ -423,11 +377,11 @@ footer {
   .main-header {
     padding: 1em 30px; }
 
-  .posts {
+  .newses-body {
     padding: calc(100% - 97%); }
-    .posts h1 {
+    .newses-body h1 {
       font-size: 25px; }
-    .posts .postwarpper {
+    .newses-body .newses-wrapper {
       grid-template-columns: 1fr; }
 
   footer {
@@ -441,4 +395,4 @@ footer {
     footer h4 {
       margin: 0; } }
 
-/*# sourceMappingURL=posts.css.map */
+/*# sourceMappingURL=newses.css.map */
