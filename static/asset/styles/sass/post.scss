@@ -1,3 +1,368 @@
+@import "variables";
+@import "mixins";
+@import url(../fonts/fonts.css);
+@keyframes comeAndGomf {
+  0% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+  50% {
+    transform: translate(50px, 0);
+  }
+  51% {
+    transform: translate(50px, 50px);
+  }
+  52% {
+    transform: translate(-50px, 50px);
+  }
+  53% {
+    transform: translate(-50px, 0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
 body {
-  background-color: red;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "dirooz";
+  color: $mainBlack;
+  line-height: 30px;
+  background-color: $bgColor;
+  min-width: 320px;
+  position: relative;
+  z-index: 1;
+}
+body > * {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  transition: $transition;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.firts-row {
+  @include flexMixin(flex, row, space-between, center);
+  column-gap: 300px;
+  padding: 0 60px;
+  height: 55px;
+  border-bottom: 1px solid $myGrey;
+  .contact-info {
+    @include flexMixin(flex, row, space-evenly, center);
+    height: 100%;
+    div {
+      @include flexMixin(flex, row, space-evenly, center);
+      padding: 0 10px;
+      font-size: 13px;
+      height: 100%;
+      border-right: 1px solid $myGrey;
+      i {
+        font-size: 15px;
+        color: $myGrey;
+        margin: 0 5px;
+        position: relative;
+        top: 2px;
+      }
+      a {
+        color: $myGrey;
+        display: inline-block;
+
+        &:hover {
+          color: $mainBlack;
+          transform: scale(1.1);
+        }
+      }
+    }
+    .last-news {
+      background-color: $extraColor1;
+      padding: 5px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      color: #fff;
+    }
+    .last-news-content {
+      font-size: 12px;
+    }
+  }
+  .social-icons {
+    height: 100%;
+    ul {
+      @include flexMixin(flex, row, space-evenly, center);
+      width: 200px;
+      height: 100%;
+      margin: 0;
+      &:last-child {
+        border-left: 1px solid $myGrey;
+      }
+      li {
+        border-right: 1px solid $myGrey;
+        height: 100%;
+        @include flexMixin(flex, row, center, center);
+        width: 100%;
+      }
+      a {
+        color: $myGrey;
+        font-size: 20px;
+        display: inline-block;
+        &:hover {
+          color: $mainBlack;
+          transform: scale(1.2) rotate(360deg);
+        }
+      }
+    }
+  }
+}
+.main-header {
+  @include flexMixin(flex, row, space-between, center);
+  padding: 0 60px;
+  .logo {
+    img {
+      width: 150px;
+      @include imageFit;
+    }
+  }
+  .show-in-small {
+    display: none;
+  }
+  .main-menu {
+    ul {
+      @include flexMixin(flex, row, space-evenly, center);
+      column-gap: 30px;
+    }
+    .active {
+      color: $extraColor1;
+      font-weight: bold;
+      transform: scale(1.2);
+    }
+    a {
+      color: $mainBlack;
+      font-size: 14px;
+      background-color: $bgColor;
+      padding: 10px 10px;
+      display: inline-block;
+      &:hover {
+        color: $extraColor1;
+        font-weight: bold;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .burgerIcon {
+    display: none;
+  }
+}
+// single posts style
+
+// single post style
+footer {
+  margin: 0;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='39' height='39' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d4d4d4' fill-opacity='0.08'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.08'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+  padding: 30px 60px 0;
+  @include flexMixin(flex, row, space-evenly, center);
+  .footer-col {
+    margin: 0 0 1em;
+    padding: 0 15px;
+    flex-basis: 25%;
+    @include flexMixin(flex, column, center, center);
+  }
+  img {
+    @include imageFit;
+    width: 200px;
+  }
+  a {
+    color: $primaryColor;
+    display: inline-block;
+    &:hover {
+      color: $extraColor1;
+      transform: translate(-10px, 0px);
+    }
+  }
+  h4 {
+    font-size: 25px;
+    margin: 0 0 1em;
+    color: $extraColor1;
+  }
+  ul {
+    line-height: 40px;
+  }
+  p {
+    text-align: justify;
+  }
+  .foooter-call-links {
+    i {
+      margin: 0 10px;
+      position: relative;
+      top: 2px;
+      font-size: 18px;
+      color: $extraColor1;
+    }
+    a {
+      &:hover {
+        transform: translate(0, -10px);
+      }
+    }
+  }
+  .login-btn {
+    @include styler($bgColor, $extraColor1, 20px, 5px);
+    border: 1px solid $extraColor1;
+    padding: 10px 30px;
+    &:hover {
+      color: $extraColor1;
+      background-color: $bgColor;
+      transform: scale(1.1);
+    }
+  }
+  .social-footer {
+    margin: 2em 0 0;
+    @include flexMixin(flex, row, space-evenly, center);
+    li {
+      width: 45px;
+      height: 45px;
+      margin: 0 5px;
+      overflow: hidden;
+      box-shadow: inset 0px 0px 10px -2px #0000006b;
+      @include styler($bgColor, $extraColor1, 20px, 50%);
+      font-size: 20px;
+      @include flexMixin(flex, row, space-evenly, center);
+      &:hover {
+        a {
+          transform: translate(0, 0);
+        }
+        i {
+          animation-name: comeAndGomf;
+          animation-duration: 1s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+          animation-direction: alternate;
+        }
+      }
+    }
+    a {
+      color: $bgColor;
+    }
+    i {
+      display: inline-block;
+    }
+  }
+}
+.menu-actived {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+//responsive
+
+@include media(L) {
+  .firts-row {
+    column-gap: 0px;
+  }
+  footer {
+    font-size: 13px;
+    h4 {
+      font-size: 17px;
+    }
+  }
+}
+@include media(T) {
+  .main-header {
+    padding: 1em 60px;
+    .burgerIcon {
+      @include flexMixin(flex, row, center, center);
+      cursor: pointer;
+      i {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+    }
+    .main-menu {
+      width: 100%;
+      ul {
+        @include flexMixin(flex, column, center, flex-start);
+        li {
+          width: 100%;
+          margin: 0 0 1em;
+          border-radius: 5px;
+          box-shadow: inset 0px 0px 10px -5px #0000006b;
+          transition: $transition;
+          text-align: center;
+          &:hover {
+            box-shadow: 0px 0px 10px 0px #00000038;
+          }
+          a {
+            background-color: unset;
+          }
+        }
+      }
+    }
+  }
+  .main-menu-container {
+    .show-in-small {
+      display: block;
+    }
+    transition: $transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    transform: translateX(-100vw);
+    background-color: $bgColor;
+    padding: 2em 3em;
+    z-index: 2;
+    overflow: scroll;
+  }
+  .firts-row {
+    .contact-info {
+      .latest-news {
+        display: none;
+      }
+    }
+  }
+  footer {
+    flex-direction: column;
+    h4 {
+      font-size: 22px;
+    }
+  }
+}
+@include media(P) {
+  .firts-row {
+    display: none;
+  }
+  .main-header {
+    padding: 1em 30px;
+  }
+  .newses-body {
+    padding: calc(100% - 97%);
+    h1 {
+      font-size: 25px;
+    }
+    .newses-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  footer {
+    padding: 30px 10px 0;
+    .foooter-call-links {
+      @include flexMixin(flex, row, space-between, center);
+      width: 100%;
+    }
+    h4 {
+      margin: 0;
+    }
+  }
 }

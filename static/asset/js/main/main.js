@@ -6,9 +6,6 @@ import { HeaderFooter } from "./template.js";
 // let neededDate = date.toLocaleDateString('fa-IR');
 // console.log(neededDate);
 /* -------- variables --------- */
-let today = new Date().toLocaleDateString('fa-IR');
-console.log(today);
-
 //image gallery
 const galleryWrapper = document.querySelector('.photo-wrapper');
 const galleryImagesArray = [...document.querySelectorAll('.gallery-photo')];
@@ -37,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     axios
         .get("http://127.0.0.1:8000/api/posts/")
         .then((res) => {
+            console.log(window.location.pathname);
             allPostsData = res.data;
+            console.log(allPostsData);
             let posts = allPostsData.filter((post) => post.cat.name !== "news");
             const post = new Post();
             post.renderCatBtns(posts);
@@ -163,7 +162,7 @@ class Post {
         <p class="post-text">
         ${post.excerpt} ... 
         </p>
-        <a href="post/${post.slug}" class="post-more-btn">
+        <a href="posts/${post.slug}" class="post-more-btn">
             بیشتر بخوانید...
         </a>
     </div>`;
