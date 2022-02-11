@@ -21,8 +21,8 @@ urlpatterns = [
     re_path('newses/(?P<slug>[-\w]+)/', views.news_detail, name='news_detail'),
 
     # api address
-    re_path('api/posts/(?P<slug>[-\w]+)/', views.PostDetail.as_view()),
-    path('api/posts/', views.PostList.as_view()),
+    re_path('api/(?P<slug>[-\w]+)/', views.PostDetail.as_view()),
+    path('api/', views.PostList.as_view()),
     path('api/gallery/', views.Gallery.as_view()),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),

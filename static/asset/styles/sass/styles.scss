@@ -57,6 +57,21 @@ ul {
   list-style: none;
   padding: 0;
 }
+.link-to-collective-page {
+  margin: 2em auto;
+  display: block;
+  width: 200px;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  padding: 10px;
+  border-radius: 5px;
+  transition: $transition;
+  &:hover {
+    color: $bgColor;
+    background-color: $primaryColor;
+    transition: $transition;
+  }
+}
 .firts-row {
   @include flexMixin(flex, row, space-between, center);
   column-gap: 300px;
@@ -349,7 +364,6 @@ ul {
       }
       .post-category {
         @include styler($extraColor1, #fff, 12px, 5px);
-        margin-left: 10px;
         &:hover {
           color: $primaryColor;
         }
@@ -365,6 +379,19 @@ ul {
         &:hover {
           color: #fff;
           background-color: $primaryColor;
+        }
+      }
+      .post-detail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 200px;
+        span {
+          margin-left: 1em;
+        }
+        .post-author {
+          color: $primaryColor;
+          font-size: 13px;
         }
       }
     }

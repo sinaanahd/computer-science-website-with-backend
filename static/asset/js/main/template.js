@@ -34,7 +34,7 @@ export class HeaderFooter {
         </div>
         <div class="main-header">
             <div class="logo">
-                <a href="#">
+                <a href="http://127.0.0.1:8000/">
                     <img src="../../static/asset/images/logo-big-02.png" alt="لوگوی انجمن"/>
                 </a>
             </div>
@@ -42,10 +42,11 @@ export class HeaderFooter {
                 <p class="show-in-small">منوی وب سایت انجمن</p>
                 <nav class="main-menu">
                     <ul>
-                        <li><a class="active" href="#">خانه</a></li>
-                        <li><a href="#">درباره ما</a></li>
-                        <li><a href="#">ارتباط با ما</a></li>
-                        <li><a href="#">گالری تصاویر</a></li>
+                        <li><a href="http://127.0.0.1:8000/"  ${document.title === "انجمن علوم کامپیوتر دانشگاه" ? 'class="active"' : " "}>خانه</a></li>
+                        <li><a href="http://127.0.0.1:8000/about-us/" ${document.title === "درباره انجمن علمی علوم کامپیوتر" ? 'class="active"' : " "} target="_blank">درباره انجمن</a></li>
+                        <li><a href="http://127.0.0.1:8000/gallery/" ${document.title === "گالری تصاویر" ? 'class="active"' : " "} target="_blank">گالری تصاویر</a></li>
+                        <li><a href="http://127.0.0.1:8000/posts" ${document.title === "مقالات انجمن علوم کامپیوتر دانشگاه گیلان" ? 'class="active"' : " "} target="_blank">مقالات</a></li>
+                        <li><a href="http://127.0.0.1:8000/newses" ${document.title === "اخبار انجمن علمی علوم کامپیوتر دانشگاه گیلان" ? 'class="active"' : " "} target="_blank">اخبار</a></li>
                     </ul>
                 </nav>
             </div>
@@ -83,11 +84,10 @@ export class HeaderFooter {
                 درباره انجمن
             </h4>
             <ul>
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">گالری تصاویر</a></li>
-                <li><a href="#">اخبار</a></li>
-                <li><a href="#">مقالات</a></li>
-                <li><a href="#">ارتباط با ما</a></li>
+                <li><a href="http://127.0.0.1:8000/about-us/">درباره ما</a></li>
+                <li><a href="http://127.0.0.1:8000/gallery/">گالری تصاویر</a></li>
+                <li><a href="http://127.0.0.1:8000/newses">اخبار</a></li>
+                <li><a href="http://127.0.0.1:8000/posts">مقالات</a></li>
             </ul>
         </div>
         <div class="footer-col">

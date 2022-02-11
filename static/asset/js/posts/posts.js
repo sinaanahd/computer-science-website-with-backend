@@ -13,9 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     openMenu();
     closeMenuFunc();
     axios
-        .get("http://127.0.0.1:8000/api/posts/")
+        .get("http://127.0.0.1:8000/api/")
         .then((res) => {
             const allPosts = res.data;
+            const lastNewsTag = document.querySelector('.last-news-content');
+            let newses = allPosts.filter((post) => post.cat.name === "news");
+            lastNewsTag.innerHTML = newses[0].title;
             let posts = allPosts.filter((post) => post.cat.name !== "news");
             posts.forEach(post => {
                 renderPost(post);
@@ -84,7 +87,7 @@ function renderPost(post) {
                 <p class="post-content">
                     ${post.excerpt} ...   
                 </p>
-                <a href="${post.slug}" class="show-more">
+                <a href="http://127.0.0.1:8000/api/${post.slug}" class="show-more" traget="_blank">
                     ادامه ...
                 </a>`;
     singlePost.innerHTML = singlePostContent;

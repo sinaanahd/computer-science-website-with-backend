@@ -1,17 +1,18 @@
 import { HeaderFooter } from "../main/template.js";
 
 const newsWrapper = document.querySelector('.newses-wrapper');
-
 document.addEventListener('DOMContentLoaded', () => {
     HeaderFooter.renderHeader();
     HeaderFooter.renderFooter();
     openMenu();
     closeMenuFunc();
     axios
-        .get("http://127.0.0.1:8000/api/posts/")
+        .get("http://127.0.0.1:8000/api/")
         .then((res) => {
             const allAPIdata = res.data;
+            const lastNewsTag = document.querySelector('.last-news-content');
             let newses = allAPIdata.filter((post) => post.cat.name === "news");
+            lastNewsTag.innerHTML = newses[0].title;
             newses.forEach(news => {
                 renderNews(news);
             });
@@ -56,7 +57,7 @@ function renderNews(news) {
                 <p class="news-content">
                     ${news.excerpt}
                 </p>
-                <a href="${news.slug}" class="show-more">ادامه ...</a>
+                <a href="http://127.0.0.1:8000/posts/${news.slug}" target="_blank" class="show-more"> ادامه ... </a>
     `;
     singleNewsTag.innerHTML = singleNewsContent;
 

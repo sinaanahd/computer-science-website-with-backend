@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'asset/styles/css/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>انجمن علوم کامپیوتر دانشگاه </title>
+    <link rel="icon" href="{% static '/asset/images/FAVIICON.jpg' %}">
+    <title>انجمن علوم کامپیوتر دانشگاه</title>
 </head>
 <body>
     <header class="header">
@@ -114,6 +115,9 @@
         </div>
         <div class="posts">
         </div>
+        <a href="/posts" class="link-to-collective-page" target="_blank">
+            همه مقالات
+        </a>
     </section>
     <section class="members-part">
         <h3>
@@ -189,6 +193,9 @@
         <div class="news-wrapper">
             
         </div>
+        <a href="/newses" class="link-to-collective-page" target="_blank">
+            همه اخبار
+        </a>    
     </section>
     <section class="photo-gallery">
         <h3>گالری تصاویر</h3>
@@ -276,6 +283,5 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{% static 'asset/js/main/main.js' %}" type="module"></script>
     <script src="{% static 'asset/js/slider/slider.js' %}" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.min.js"></script>
 </body>
 </html>

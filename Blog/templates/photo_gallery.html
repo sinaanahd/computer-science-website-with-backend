@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'asset/styles/css/gallery.css' %}">
+    <link rel="icon" href="{% static '/asset/images/FAVIICON.jpg' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>گالری تصاویر</title>
+</head>
+
+<body>
+    <header class="header"></header>
+    <div class="gallery-section">
+        <div class="inner-width">
+            <h1>گالری تصاویر انجمن</h1>
+        </div>
+    </div>
+    <div class="full-img" id="fullimgbox">
+        <img src="img/img1.jpg" id="fullimg">
+        <span onclick="closefullimg()">×</span>
+    </div>
+    <div class="img-gallery">
+        <img src="{% static 'asset/images/main_page/photo-gallery-1.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-2.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-3.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-4.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-5.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-6.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-7.jpg' %}" onclick="openfullimg(this.src)">
+        <img src="{% static 'asset/images/main_page/photo-gallery-8.jpg' %}" onclick="openfullimg(this.src)">
+    </div>
+    <footer class="footer"></footer>
+    <div class="menuCloser"></div>
+    <script>
+        var fullimgbox = document.getElementById("fullimgbox");
+        var fullimg = document.getElementById("fullimg");
+
+        function openfullimg(pic) {
+            fullimgbox.style.display = "flex";
+            fullimg.src = pic;
+        }
+        function closefullimg() {
+            fullimgbox.style.display = "none";
+        }
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{% static 'asset/js/static_pages/static.js' %}" type="module"></script>
+</body>
+
+</html>

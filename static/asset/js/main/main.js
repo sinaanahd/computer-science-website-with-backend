@@ -16,7 +16,6 @@ const galleryImagesArray = [...document.querySelectorAll('.gallery-photo')];
 //news
 const allNewsData = allNews;
 const newsWrapperTag = document.querySelector('.news-wrapper');
-const lastNewsTag = document.querySelector('.last-news-content');
 //posts
 let allPostsData = [];
 const postsWrapper = document.querySelector('.posts');
@@ -32,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     openMenu();
     closeMenuFunc();
     axios
-        .get("http://127.0.0.1:8000/api/posts/")
+        .get("http://127.0.0.1:8000/api/")
         .then((res) => {
-            console.log(window.location.pathname);
+            // console.log(window.location.pathname);
             allPostsData = res.data;
-            console.log(allPostsData);
+            //console.log(allPostsData);
             let posts = allPostsData.filter((post) => post.cat.name !== "news");
             const post = new Post();
             post.renderCatBtns(posts);
@@ -50,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             });
             let newses = allPostsData.filter(post => post.cat.name === "news");
+            const lastNewsTag = document.querySelector('.last-news-content');
+            lastNewsTag.innerHTML = newses[0].title;
             newses = lastThree(newses);
             newses.forEach(news => {
                 post.renderNews(news);
@@ -158,11 +159,12 @@ class Post {
                 </a>
             </span>
             <span class="post-date">${changedDate}</span>
+            <span class="post-author">${post.user.username}</span>
         </div>
         <p class="post-text">
         ${post.excerpt} ... 
         </p>
-        <a href="posts/${post.slug}" class="post-more-btn">
+        <a href="posts/${post.slug}" class="post-more-btn" target="_blank">
             بیشتر بخوانید...
         </a>
     </div>`;
@@ -181,7 +183,7 @@ class Post {
                     <p class="news-content">
                     ${news.excerpt}
                     </p>
-                    <a href="${news.slug}" class="read-more-news-btn">
+                    <a href="newses/${news.slug}" class="read-more-news-btn" target="_blank">
                         بیشتر بخوانید ...
                     </a>
                 </div>`;
