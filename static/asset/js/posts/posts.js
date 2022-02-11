@@ -87,7 +87,7 @@ function renderPost(post) {
                 <p class="post-content">
                     ${post.excerpt} ...   
                 </p>
-                <a href="http://127.0.0.1:8000/api/${post.slug}" class="show-more" traget="_blank">
+                <a href="http://127.0.0.1:8000/posts/${post.slug}" class="show-more" traget="_blank">
                     ادامه ...
                 </a>`;
     singlePost.innerHTML = singlePostContent;
